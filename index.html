@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDDS Project | Corridor of Hate - Official Teaser</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        :root {
+            --purple: #8a2be2;
+            --blood: #8b0000;
+            --glitch-green: #00ff41;
+            --bg: #050505;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #ccc;
+            font-family: 'VT323', monospace;
+            margin: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Эффект старого монитора */
+        .crt::before {
+            content: " ";
+            position: fixed; top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 2px, 3px 100%;
+            z-index: 100; pointer-events: none;
+        }
+
+        /* Главный экран */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, #1a0033 0%, #050505 100%);
+        }
+
+        .firm-tag {
+            font-size: 1.5rem;
+            color: #555;
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 7rem;
+            color: var(--purple);
+            text-shadow: 0 0 20px var(--purple);
+            margin: 0;
+            animation: glitch 3s infinite;
+        }
+
+        .release-date {
+            font-size: 2rem;
+            color: var(--glitch-green);
+            margin-top: 20px;
+            border: 1px solid var(--glitch-green);
+            padding: 10px 20px;
+        }
+
+        /* Секция описания */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        .story-block {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 40px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .story-block h2 {
+            color: var(--purple);
+            font-size: 2.5rem;
+        }
+
+        /* Спойлеры / Секреты */
+        .spoiler {
+            background: #222;
+            color: #222;
+            cursor: help;
+            transition: 0.3s;
+            padding: 0 5px;
+        }
+
+        .spoiler:hover {
+            background: var(--blood);
+            color: #fff;
+        }
+
+        .hidden-hint {
+            font-size: 0.8rem;
+            color: #333;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        /* Пасхалка в коде страницы */
+        .easter-egg {
+            display: none;
+        }
+
+        /* Секция Стадий */
+        .stage-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .stage {
+            border-top: 2px solid #333;
+            padding-top: 20px;
+        }
+
+        /* Анимации */
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            2% { transform: translate(-5px, 2px); text-shadow: 2px 0 red; }
+            4% { transform: translate(5px, -2px); text-shadow: -2px 0 blue; }
+            6% { transform: translate(0); }
+            100% { transform: translate(0); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            background: #000;
+            color: #444;
+        }
+
+        .btn-scroll {
+            margin-top: 50px;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #fff;
+            padding: 15px 30px;
+            transition: 0.5s;
+        }
+
+        .btn-scroll:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body class="crt">
+
+    <header>
+        <div class="firm-tag">RDDS PROJECT</div>
+        <h1>CORRIDOR OF HATE</h1>
+        <div class="release-date">EXPECTED: JANUARY 2027</div>
+        <a href="#explore" class="btn-scroll">УЗНАТЬ ПРАВДУ</a>
+    </header>
+
+    <div id="explore" class="container">
+        <div class="story-block">
+            <h2>ДВА БРАТА. ОДИН КОШМАР.</h2>
+            <p>Тихий творец Кистер и шумный атлет Дастер. Их жизни были обычными, пока мир не начал трещать по швам. Буллинг, предательство, украденная любовь... 
+                Все это копилось внутри, пока не превратилось в <span class="spoiler">чистую Ненависть</span>.</p>
+            
+            <p>Однажды ночью реальность Штатов сменилась бесконечным Коридором. Здесь двери ведут не в комнаты, а в самые темные уголки их душ.</p>
+            <div class="hidden-hint">// наведите на закрашенный текст, чтобы увидеть правду</div>
+        </div>
+
+        <div class="story-block" style="border-left: 4px solid var(--blood);">
+            <h2>ЧТО СКРЫВАЕТ RDDS PROJECT?</h2>
+            <p>Игра предложит уникальный опыт: выбери своего героя и узнай его личную трагедию. 
+                Кистер сражается пушкой на расстоянии, выплескивая гнев через заряды. 
+                Дастер идет напролом с мечом, превращая свою боль в скорость.</p>
+            
+            <p><strong>СПОЙЛЕР СЕКТОРА 4:</strong> В конце каждой стадии вас ждет <span class="spoiler">Эрик, который уже не тот, кем кажется</span>. Сможете ли вы дойти до финала и победить саму Ненависть?</p>
+        </div>
+
+        <div class="stage-info">
+            <div class="stage">
+                <h3>STAGE I</h3>
+                <p>Порядок. Знакомые лица. Магазин Эрика Картера.</p>
+            </div>
+            <div class="stage">
+                <h3>STAGE II</h3>
+                <p>Искажение. Квесты. Цена монеты — твоя решимость.</p>
+            </div>
+            <div class="stage" style="color: var(--blood);">
+                <h3>STAGE III</h3>
+                <p>Психо-хоррор. Секретные NPC. Обратного пути нет.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>RDDS PROJECT © 2026-2027</p>
+        <p style="font-size: 0.6rem;">P.S. Кистер видит тебя. Дастер слышит тебя. Ненависть ждет тебя.</p>
+        </footer>
+
+</body>
+</html>

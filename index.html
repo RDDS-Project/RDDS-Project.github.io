@@ -70,6 +70,7 @@
         /* Секция описания */
         .container {
             max-width: 900px;
+            margin: 0 house;
             margin: 0 auto;
             padding: 100px 20px;
         }
@@ -155,6 +156,39 @@
             background: #fff;
             color: #000;
         }
+
+        /* СТИЛИ ДЛЯ ТВОИХ КНОПОК СОЦСЕТЕЙ */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .social-btn {
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #333;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            background: #0a0a0a;
+            transition: all 0.3s ease;
+        }
+
+        .tg-btn:hover {
+            background: var(--purple);
+            border-color: var(--purple);
+            box-shadow: 0 0 15px var(--purple);
+            color: #fff;
+        }
+
+        .gj-btn:hover {
+            background: var(--blood);
+            border-color: var(--blood);
+            box-shadow: 0 0 15px var(--blood);
+            color: #fff;
+        }
     </style>
 </head>
 <body class="crt">
@@ -200,9 +234,15 @@
     </div>
 
     <footer>
+        <!-- КНОПКИ ДЛЯ ТВОИХ ПАБЛИКОВ -->
+        <div class="social-links">
+            <a href="https://t.me/HALLWAYOFHATE" target="_blank" class="social-btn tg-btn">TELEGRAM CHANNEL</a>
+            <a href="gamejolt.com/invite/sds_dev" target="_blank" class="social-btn gj-btn">GAME JOLT</a>
+        </div>
+
         <p>RDDS PROJECT © 2026-2027</p>
         <p style="font-size: 0.6rem;">P.S. Все права защищены.</p>
-        </footer>
+    </footer>
 
 </body>
-</html>Official website for the "Corridor of Hate" indie horror game by RDDS Development.
+</html>
